@@ -11124,7 +11124,7 @@ header.masthead {
   padding-bottom: 8rem;
   background: no-repeat center center;
   background-color: #6c757d;
-  background-size: auto;
+  background-size: cover;
   background-attachment: scroll;
 }
 header.masthead:before {
@@ -11245,4 +11245,13 @@ header.masthead .site-heading .h1 {
   .post-preview > a > .post-title {
     font-size: 2.25rem;
   }
+}
+
+.First Title h2{
+ border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
 }
