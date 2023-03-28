@@ -66,15 +66,21 @@ main {
     flex-wrap: wrap;
   width: 100%;
   margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .video-container {
-  padding:0 0 15px 30px
+    position: relative;
+    width:40%;
+    left:35px;
+      overflow:hidden;
 }
 
 .intro-container {
+    position: relative;
     width:50%;
-  padding: 0 0 0 30px;
+    left:50px;
+  padding: 0 0 0 0px;
 }
 .footer_banner{
  display: flex;
@@ -98,3 +104,21 @@ main {
 .info:hover{
   background-position-x: left;
   background-size:100% 2px}
+
+.title{
+    dislplay:flex;
+    position: relative;
+    padding:30px 0 0 30px;
+    width:30%;
+}
+.title{
+  background:linear-gradient(to right,#ec695c,#61c454) no-repeat right bottom;
+  background-size:0 30px;
+  transition:background-size 1300ms;
+}
+
+.title:hover{
+  background-position-x: left;
+  background-size:100% 2px}
+
+
