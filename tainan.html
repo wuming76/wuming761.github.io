@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- Font Awesome icons (free version)-->
+        <script src="https://kit.fontawesome.com/9cd404b243.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+<title>臺南市原民人數圖表</title>
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+  <div class="logo">
+    <img src="images/newlogo_有顏色粗線條_黃色_圓形.png"></div>
+  <nav>
+  <ul>
+    <li><a href="Taloma index 1.html">首頁</a></li>
+    <li><a href="mappage.html">族群介紹</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">活動資訊</a>
+      <div class="dropdown-content">
+        <a href="for the ac test page.html">體驗活動資訊</a>
+        <a href="#">講座資訊</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">影音專區</a>
+      <div class="dropdown-content">
+        <a href="Video page.html">TALOMA影音專區</a>
+        <a href="othervideo.html">影片推薦</a>
+      </div>
+    </li>
+    <li><a href="about us.html">關於我們</a></li>
+             <div class="social-icons">
+                       <li>  <a class="social-icon" href="https://www.facebook.com/profile.php?id=100090221569990" target="_blank">
+                           <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+					<li><a class="social-icon" href="https://www.instagram.com/_taloma_/" target="_blank">
+                            <i class="fa-brands fa-instagram" style="font-size:20px;">
+                        </i>
+                        </a>
+      </li>
+     <li> <a class="social-icon" href="https://www.instagram.com/_taloma_/" target="_blank">
+                            <i class="fa-brands fa-youtube" style="font-size:18px;">
+         </i>  
+         </a>
+                 </li>
+	  </div>
+    </ul>
+  </nav>
+       <script>
+  // 通过 JavaScript 控制下拉菜单的显示和隐藏
+const menuItems = document.querySelectorAll('.has-submenu');
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+    const submenu = item.querySelector('.submenu');
+    submenu.classList.toggle('show');
+  });
+});
+
+</script>
+</header>
+<body>
+     <div class="title">
+    <h1 class="title-text1">縣市各族群人口</h1>
+    </div>
+    <div class="mappage">
+    <div class="map">
+<svg >
+    <path id="1e48e0bb-8964-4121-b347-b900162cf771" data-name="taipei_city" class="96fdfe13-4732-40bb-9e9c-cdc6e310fcb9" d="M466.27,77.17,465.42,79l-.85.85-.24.49-.85,1v1.83l-1.22.73L462,85.47l.49,1.59,1.22.85,3.9.49,2.44,2.32,1,1.83.12,5.61-1.83,2.56-1.22,1.1-.61,1.34.37,3.54.73,1.46,1.46-.12,1.34-.73.85-1.22.85-.12,2,.85,1.1.85.49,1.34v1.83l.85,1.46,1.58,1.1,1.71.12.73,2.93,2.56,1.71,6.83.73,1.46-.61h2l.12-1.22-3.29-1.59-.24-1.71.12-1.46-.85-2.8v-1.58l.85-1.34,1.22-.73,3.41.24,1.1-.73,1.46-.37,4.63.24.37-1-1.1-.49-1.58.49L497.86,103l-3.29-2.44L494,99.25l.85-1.1-.24-1.34-1-1,.73-.85,1.59-3.29-.37-3.17L490.29,84l.37-1.59,1-1.1-.37-1.22-2-1.71-.73-1.1-.12-3.54-2-2V70l.49-1.34V66.81l-3.17.24-1.34-2.44-1-1.1-1.71,2.68-1.34.61-.61,1.34-2.56,1.46-.61,1.59-1.1.73-1.71.12-1.34.61-2.07,2.44-.61,1.59-1.59.48h0Z"/> </svg></div>
+    <div class="bar">
+   <!-- 長條圖顯示的位置 -->
+    <canvas id="myChart"></canvas>
+
+    <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const chartElement = document.getElementById('myChart');
+
+        new Chart(chartElement, {
+            type: 'bar',
+            data: {
+                labels: ['原民人數'],
+                 datasets: [{
+                    label: '阿美族',
+                    data: [2985],
+                },{
+                    label: '泰雅族',
+                    data: [779],
+                },{
+                    label: '排灣族',
+                    data: [2710],
+                },{
+                    label: '布農族',
+                    data: [1228],
+                },{
+                    label: '魯凱族',
+                    data: [242],
+                },{
+                    label: '卑南族',
+                    data: [401],
+                },{
+                    label: '鄒族',
+                    data: [118],
+                },{
+                    label: '賽夏族',
+                    data: [45],
+                },{
+                    label: '雅美族',
+                    data: [21],
+                },{
+                    label: '邵族',
+                    data: [19],
+                },{
+                    label: '噶瑪蘭族',
+                    data: [18],
+                },{
+                    label: '太魯閣族',
+                    data: [359],
+                },{
+                    label: '撒奇萊雅族',
+                    data: [11],
+                },{
+                    label: '賽德克族',
+                    data: [89],
+                },{
+                    label: '拉阿魯哇族',
+                    data: [4],
+                },{
+                    label: '卡那卡那富族',
+                    data: [6],
+                }],
+            }
+        });
+    </script>
+    </div>
+    </div>
+    <div class="goback">
+         <button onclick="goBack()">返回上一頁</button>
+    </div>
+        <script>
+        // JavaScript 函數，用於返回上一頁
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <div class="footer_banner" id="contact">
+  <div class="ics">
+      <img src="images/資傳系LOGO(系網版).png" alt="ics">
+  </div>
+  <div class="sclogo" > 
+      <img src="images/logo-校徽+中英文字(去背).png" alt="shu">
+    </div>
+</div>
+</body>
+</html>
