@@ -114,19 +114,19 @@ menuItems.forEach((item) => {
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
     <img src="images/wawa.jpg"  alt="pic1" style="width:100%">
-    <div class="text">Caption Text</div>
+    <div class="text">2023都歷山海的wawa文化夏令營</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
     <img src="images/尋回園路.jpg"  alt="pic2" style="width:100%">
-    <div class="text">Caption Two</div>
+    <div class="text">尋回原路：西拉雅族的正名之路</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
     <img src="images/南島藝術三年展.png"  alt="pic3" style="width:100%">
-    <div class="text">Caption Three</div>
+    <div class="text">南島藝術三年展</div>
   </div>
 
   <!-- Next and previous buttons -->
@@ -214,7 +214,33 @@ menuItems.forEach((item) => {
       <p style="word-break: break-all">``</p></a>
       <!-- 第四个活动的内容 -->
     </div>
-  </div>  
+  </div> 
+        <div class="main1">
+  <div class="activity" id="activity1">
+    <div class="ac-info1">
+        <a href="https://www.facebook.com/museum.chenggong.tw/posts/pfbid02uAQ9C8toAmCieF4zaasVb7iWsigBw1yiPfTtauMVVZh7ZGmmMNbV8wSbPWuQ8xuNl">
+      <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t39.30808-6/317850314_592228832709454_451468209762778184_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=49d041&_nc_ohc=CJFKc4s3E4sAX_Mc8DD&_nc_ht=scontent.ftpe4-1.fna&oh=00_AfAGj0gV1Xxx6FCAL76BbzMfNMnj1JOgj0gdUVzzQiptTA&oe=65257500" alt="acpic">
+      <h2 class="actitle1">[展覽]會呼吸的房子—從傳統建築探尋阿美族生活特展</h2>
+      <p style="word-break: break-all">這個展覽是什麽</p></a>
+    </div>
+  </div>
+            <div class="activity" id="activity1">
+    <div class="ac-info1">
+        <a href="https://www.facebook.com/museum.chenggong.tw/posts/pfbid02uAQ9C8toAmCieF4zaasVb7iWsigBw1yiPfTtauMVVZh7ZGmmMNbV8wSbPWuQ8xuNl">
+      <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t39.30808-6/317850314_592228832709454_451468209762778184_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=49d041&_nc_ohc=CJFKc4s3E4sAX_Mc8DD&_nc_ht=scontent.ftpe4-1.fna&oh=00_AfAGj0gV1Xxx6FCAL76BbzMfNMnj1JOgj0gdUVzzQiptTA&oe=65257500" alt="acpic">
+      <h2 class="actitle1">[展覽]會呼吸的房子—從傳統建築探尋阿美族生活特展</h2>
+      <p style="word-break: break-all">這個展覽是什麽</p></a>
+    </div>
+  </div>
+            <div class="activity" id="activity1">
+    <div class="ac-info1">
+        <a href="https://www.facebook.com/museum.chenggong.tw/posts/pfbid02uAQ9C8toAmCieF4zaasVb7iWsigBw1yiPfTtauMVVZh7ZGmmMNbV8wSbPWuQ8xuNl">
+      <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t39.30808-6/317850314_592228832709454_451468209762778184_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=49d041&_nc_ohc=CJFKc4s3E4sAX_Mc8DD&_nc_ht=scontent.ftpe4-1.fna&oh=00_AfAGj0gV1Xxx6FCAL76BbzMfNMnj1JOgj0gdUVzzQiptTA&oe=65257500" alt="acpic">
+      <h2 class="actitle1">[展覽]會呼吸的房子—從傳統建築探尋阿美族生活特展</h2>
+      <p style="word-break: break-all">這個展覽是什麽</p></a>
+    </div>
+  </div>
+             </div>
   </div>
         
 <div id="searchResults"></div>
@@ -357,7 +383,15 @@ for (var i = 0; i < prevNextButtons.length; i++) {
     object-fit: cover;
 }
 
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.search-results .activity {
+    flex-basis: calc(25% - 20px); /* 设置每个活动的宽度，并考虑到 padding */
+    margin: 10px; /* 设置活动之间的间距 */
+}
 </style>
 
 <div class="footer_banner" id="contact">
