@@ -112,14 +112,30 @@ main {
     height: auto;
 }
 .footer_banner{
- display: flex;
   width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
   background-color:#4A7F42;
     position: relative;
     bottom:0;
   align-items: center;
     justify-content: center;
     
+}
+.footerpic{
+     display: flex;
+  width: 100%;
+    position: relative;
+    bottom:0;
+  align-items: center;
+    justify-content: center;
+}
+.copyright{
+    width: 100%;
+    display: flex;
+      align-items: center;
+    justify-content: center;
 }
 .ics{
     width:30%;
@@ -202,19 +218,27 @@ main {
   margin-top: 1%;
     margin-bottom: 1%;
 }
+.videobox-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 7px;
+}
 .videobox0{
-      position: relative;
+  position: relative;
     border-radius: 25px;
     border: 2px ;
     overflow: hidden;
     width: 40vw;
     height: auto;
+    margin: 1% 0 0 0;
 }
 .videoinfo0{
-        flex-wrap:wrap;
+      flex-wrap:wrap;
     width: 40%;
     height: auto;
     padding: 0 0 0 30px;
+     margin: 1% 0 0 0;
 }
 .videotitle0{
     box-shadow: 0 1px;padding-bottom:5px;
@@ -256,20 +280,20 @@ main {
     box-shadow: 0 1px;padding-bottom:5px;
 }
 .videobox3{
-      position: relative;
+    position: relative;
     border-radius: 25px;
     border: 2px ;
     overflow: hidden;
     width: 40vw;
     height: auto;
-      margin: 1% 0 0 0;
+    margin: 1% 0 0 0;
 }
 .videoinfo3{
-        flex-wrap:wrap;
+    flex-wrap:wrap;
     width: 40%;
     height: auto;
     padding: 0 0 0 30px;
-      margin: 1% 0 0 0;
+     margin: 1% 0 0 0;
 }
 .videotitle3{
     box-shadow: 0 1px;padding-bottom:5px;
@@ -525,13 +549,14 @@ main {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  text-align: right; /* 將 text-align 移至 .id1info2 */
+  text-align: left; /* 將 text-align 移至 .id1info2 */
 }
 
 .info2 {
   box-shadow: 0 1px;
   padding-bottom: 5px;
   margin-right: 0;
+     text-align: right; 
 }
 .intro-container {
     width: 100%;
