@@ -178,13 +178,12 @@ menuItems.forEach((item) => {
       <!-- 第四个活动的内容 -->
     </div>
   </div>
-</div>
-    <div class="main1">
+
       <div class="activity" id="activity5">
     <div class="ac-info1"><a href="https://south-i-2022.mystrikingly.com/?fbclid=IwAR1BuqN9ccO8SqvHawLBUJ7bl77xH1uFKJibzzsTzwXECtInsQZvxxOqw-0">
       <img src="https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/1779334/393983_27235.jpeg" alt="acpic">
       <h2 class="actitle1">[文化體驗]111年中臺灣原住民族文化體驗坊</h2>
-      <p style="word-break: break-all">這個展覽是什麽</p>
+      <p style="word-break: break-all">這個是什麽</p>
         </a>
     </div>
   </div>
@@ -193,7 +192,7 @@ menuItems.forEach((item) => {
     <div class="ac-info2"><a href="https://tiprc.cip.gov.tw/blog_wp/?p=20543">
       <img src="https://tiprc.cip.gov.tw/blog_wp/wp-content/uploads/2023/05/content-1-1.jpg" alt="acpic">
       <h2 class="actitle1">[圖書相關]尋回原路：西拉雅族的正名之路</h2>
-      <p style="word-break: break-all">表演阿拉</p> </a>
+      <p style="word-break: break-all">表演阿拉：西拉雅族的正名：西拉雅族的正名</p> </a>
       <!-- 第二个活动的内容 -->
     </div>
   </div>
@@ -215,32 +214,6 @@ menuItems.forEach((item) => {
       <!-- 第四个活动的内容 -->
     </div>
   </div> 
-        <div class="main1">
-  <div class="activity" id="activity1">
-    <div class="ac-info1">
-        <a href="https://www.facebook.com/museum.chenggong.tw/posts/pfbid02uAQ9C8toAmCieF4zaasVb7iWsigBw1yiPfTtauMVVZh7ZGmmMNbV8wSbPWuQ8xuNl">
-      <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t39.30808-6/317850314_592228832709454_451468209762778184_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=49d041&_nc_ohc=CJFKc4s3E4sAX_Mc8DD&_nc_ht=scontent.ftpe4-1.fna&oh=00_AfAGj0gV1Xxx6FCAL76BbzMfNMnj1JOgj0gdUVzzQiptTA&oe=65257500" alt="acpic">
-      <h2 class="actitle1">[展覽]會呼吸的房子—從傳統建築探尋阿美族生活特展</h2>
-      <p style="word-break: break-all">這個展覽是什麽</p></a>
-    </div>
-  </div>
-            <div class="activity" id="activity1">
-    <div class="ac-info1">
-        <a href="https://www.facebook.com/museum.chenggong.tw/posts/pfbid02uAQ9C8toAmCieF4zaasVb7iWsigBw1yiPfTtauMVVZh7ZGmmMNbV8wSbPWuQ8xuNl">
-      <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t39.30808-6/317850314_592228832709454_451468209762778184_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=49d041&_nc_ohc=CJFKc4s3E4sAX_Mc8DD&_nc_ht=scontent.ftpe4-1.fna&oh=00_AfAGj0gV1Xxx6FCAL76BbzMfNMnj1JOgj0gdUVzzQiptTA&oe=65257500" alt="acpic">
-      <h2 class="actitle1">[展覽]會呼吸的房子—從傳統建築探尋阿美族生活特展</h2>
-      <p style="word-break: break-all">這個展覽是什麽</p></a>
-    </div>
-  </div>
-            <div class="activity" id="activity1">
-    <div class="ac-info1">
-        <a href="https://www.facebook.com/museum.chenggong.tw/posts/pfbid02uAQ9C8toAmCieF4zaasVb7iWsigBw1yiPfTtauMVVZh7ZGmmMNbV8wSbPWuQ8xuNl">
-      <img src="https://scontent.ftpe4-1.fna.fbcdn.net/v/t39.30808-6/317850314_592228832709454_451468209762778184_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=49d041&_nc_ohc=CJFKc4s3E4sAX_Mc8DD&_nc_ht=scontent.ftpe4-1.fna&oh=00_AfAGj0gV1Xxx6FCAL76BbzMfNMnj1JOgj0gdUVzzQiptTA&oe=65257500" alt="acpic">
-      <h2 class="actitle1">[展覽]會呼吸的房子—從傳統建築探尋阿美族生活特展</h2>
-      <p style="word-break: break-all">這個展覽是什麽</p></a>
-    </div>
-  </div>
-             </div>
   </div>
         
 <div id="searchResults"></div>
@@ -346,6 +319,7 @@ for (var i = 0; i < prevNextButtons.length; i++) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+      height: 100%;
   }
 
   .activity {
@@ -353,6 +327,8 @@ for (var i = 0; i < prevNextButtons.length; i++) {
     padding: 10px;
     box-sizing: border-box;
     display: block;
+    display: flex;
+    flex-direction: column;
   }
 .ac-info1 {
     width: 100%;
@@ -361,7 +337,9 @@ for (var i = 0; i < prevNextButtons.length; i++) {
 
 .ac-info2 {
     width: 100%;
- height: 70%; 
+    height: 70%;
+ max-height: 70%;
+
 }
 
 .ac-info3 {
@@ -387,13 +365,12 @@ for (var i = 0; i < prevNextButtons.length; i++) {
     display: flex;
     flex-wrap: wrap;
 }
-
 .search-results .activity {
     flex-basis: calc(25% - 20px); /* 设置每个活动的宽度，并考虑到 padding */
     margin: 10px; /* 设置活动之间的间距 */
 }
 </style>
-
+</body>
 <div class="footer_banner" id="contact">
   <div class="ics">
       <img src="images/資傳系LOGO(系網版).png" alt="ics">
@@ -403,5 +380,5 @@ for (var i = 0; i < prevNextButtons.length; i++) {
     </div>
 </div>
 
-</body>
+
 </html>

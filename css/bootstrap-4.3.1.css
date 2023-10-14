@@ -115,9 +115,11 @@ main {
  display: flex;
   width: 100%;
   background-color:#4A7F42;
+    position: relative;
     bottom:0;
   align-items: center;
     justify-content: center;
+    
 }
 .ics{
     width:30%;
@@ -200,6 +202,23 @@ main {
   margin-top: 1%;
     margin-bottom: 1%;
 }
+.videobox0{
+      position: relative;
+    border-radius: 25px;
+    border: 2px ;
+    overflow: hidden;
+    width: 40vw;
+    height: auto;
+}
+.videoinfo0{
+        flex-wrap:wrap;
+    width: 40%;
+    height: auto;
+    padding: 0 0 0 30px;
+}
+.videotitle0{
+    box-shadow: 0 1px;padding-bottom:5px;
+}
 .videobox1{
       position: relative;
     border-radius: 25px;
@@ -272,6 +291,44 @@ main {
       margin: 1% 0 0 0;
 }
 .videotitle4{
+    box-shadow: 0 1px;padding-bottom:5px;
+}
+.videobox5{
+      position: relative;
+    border-radius: 25px;
+    border: 2px ;
+    overflow: hidden;
+    width: 40vw;
+    height: auto;
+      margin: 1% 0 0 0;
+}
+.videoinfo5{
+        flex-wrap:wrap;
+    width: 40%;
+    height: auto;
+    padding: 0 0 0 30px;
+      margin: 1% 0 0 0;
+}
+.videotitle5{
+    box-shadow: 0 1px;padding-bottom:5px;
+}
+.videobox6{
+      position: relative;
+    border-radius: 25px;
+    border: 2px ;
+    overflow: hidden;
+    width: 40vw;
+    height: auto;
+      margin: 1% 0 0 0;
+}
+.videoinfo6{
+        flex-wrap:wrap;
+    width: 40%;
+    height: auto;
+    padding: 0 0 0 30px;
+      margin: 1% 0 0 0;
+}
+.videotitle6{
     box-shadow: 0 1px;padding-bottom:5px;
 }
 .toggle-title{
@@ -537,12 +594,15 @@ main {
 }
 .intropic{
     width:40%;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content:center;
 }
 .intropic img{
     width:100%;
+    height: 100%;
+    object-fit: cover;
 }
 .fashion-container {
     width: 100%;
@@ -832,6 +892,7 @@ hr {
      box-shadow: 0 1px;padding-bottom:5px;
 }
 .search{
+    width: 90%;
     margin:0 0% 0% 2%;
 }
 .actitle1{
@@ -840,20 +901,33 @@ hr {
   padding: 0; /* 移除默认的内边距 */
 }
 .bar{
-    width: 50%;}
-.bar{
     width: 50%;
-}
-.map{
-    width: 40%;
-}
-.map svg{
-    width: 100%;
 }
 .mappage{
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
+height: auto;
 }
+.map {
+    width: 40%;
+    height: auto;
+}
+
+.map img {
+    width: 100%; /* 设置宽度为100% */
+    height: auto; /* 让高度根据宽度等比例自动调整 */
+}
+
 .goback{
     float: right;
+}
+a {
+    text-decoration: none;
+}
+.placename{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
