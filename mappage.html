@@ -45,7 +45,7 @@
                         </a>
                     </li>
 					<li><a class="social-icon" href="https://www.instagram.com/_taloma_/" target="_blank">
-                            <i class="fa-brands fa-instagram" style="font-size:20px;">
+                            <i class="fa-brands fa-instagram" style="font-size:18px;">
                         </i>
                         </a>
       </li>
@@ -78,7 +78,7 @@ menuItems.forEach((item) => {
     <div id="app">
 
 <div class="title_area">
-  <h1 style="color: black;">台灣<span>///</span><br>各縣市原民人數<br></h1>
+  <h1 style="color: black;">各縣市<span>///</span><br>原民人數統計<br></h1>
   <hr />
   <div class="forcast" v-if="now_area">
     <h5 style="color: black;">{{now_area.place}}</h5>
@@ -102,21 +102,21 @@ menuItems.forEach((item) => {
      <div class="scroll-container">
         <div class="button-container">
             <button data-index="0">阿美族</button>
-            <button data-index="1">泰雅族</button>
-            <button data-index="2">排灣族</button>
-            <button data-index="3">布農族</button>
-            <button data-index="4">魯凱族</button>
-            <button data-index="5">卑南族</button>
-            <button data-index="6">鄒族</button>
-            <button data-index="7">賽夏族</button>
-            <button data-index="8">雅美族</button>
-            <button data-index="9">邵族</button>
-            <button data-index="10">噶瑪蘭族</button>
-            <button data-index="11">太魯閣族</button>
-            <button data-index="12">撒奇萊雅族</button>
-            <button data-index="13">賽德克族</button>
-            <button data-index="14">拉阿魯哇族</button>
-            <button data-index="15">卡那卡那富族</button>
+            <button data-index="1" disabled>泰雅族</button>
+            <button data-index="2" disabled>排灣族</button>
+            <button data-index="3" disabled>布農族</button>
+            <button data-index="4" disabled>魯凱族</button>
+            <button data-index="5" disabled>卑南族</button>
+            <button data-index="6" disabled>鄒族</button>
+            <button data-index="7" disabled>賽夏族</button>
+            <button data-index="8" disabled>雅美族</button>
+            <button data-index="9" disabled>邵族</button>
+            <button data-index="10" disabled>噶瑪蘭族</button>
+            <button data-index="11" disabled>太魯閣族</button>
+            <button data-index="12" disabled>撒奇萊雅族</button>
+            <button data-index="13" disabled>賽德克族</button>
+            <button data-index="14" disabled>拉阿魯哇族</button>
+            <button data-index="15" disabled>卡那卡那富族</button>
             <!-- 添加更多按钮，每个按钮的 data-index 属性对应内容的索引 -->
         </div>
     </div>

@@ -381,9 +381,9 @@ main {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color:white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -397,7 +397,7 @@ main {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(254,254,254,1.00);
 }
 
 /* Caption text */
@@ -865,7 +865,7 @@ hr {
         button {
             padding: 10px 20px;
             margin: 5px;
-            background-color: #3498db;
+            background-color: #f4a460;
             color:black;
             border: none;
             border-radius: 5px;
