@@ -143,7 +143,7 @@ menuItems.forEach((item) => {
 </div>
 
 <div class="fashion-content">
-  <div class="fashion-content-item">
+  <div class="fashion-content-item active">
      <div class="introbox">
     <div class="intropic">
        <img src="images/男性.jpg" alt="pic"></div>
@@ -330,40 +330,58 @@ menuItems.forEach((item) => {
 
   // 初始顯示第一個內容
   faithContentItems[0].classList.add('active');
+  faithItems[0].classList.add('active-item'); // 初始時第一個 faith-item 標記為 active
 
   faithItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      // Hide all content items
+      // 隱藏所有內容項目
       faithContentItems.forEach(contentItem => {
         contentItem.classList.remove('active');
       });
 
-      // Show the clicked content item
+      // 移除所有 faith-item 的 active-item 類別
+      faithItems.forEach(item => {
+        item.classList.remove('active-item');
+      });
+
+      // 顯示被點擊的內容項目
       faithContentItems[index].classList.add('active');
+      // 將被點擊的 faith-item 標記為 active-item
+      faithItems[index].classList.add('active-item');
     });
   });
-</script>             
+</script>
+            
                   </div>
-<!-- 祭典JavaScript-->
+<!-- 祭典JavaScript -->
 <script>
   const festivalItems = document.querySelectorAll('.festival-item');
   const festivalContentItems = document.querySelectorAll('.festival-content-item');
 
   // 初始顯示第一個內容
   festivalContentItems[0].classList.add('active');
+  festivalItems[0].classList.add('active-item'); // 初始時第一個 festival-item 標記為 active
 
   festivalItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      // Hide all content items
+      // 隱藏所有內容項目
       festivalContentItems.forEach(contentItem => {
         contentItem.classList.remove('active');
       });
 
-      // Show the clicked content item
+      // 移除所有 festival-item 的 active-item 類別
+      festivalItems.forEach(item => {
+        item.classList.remove('active-item');
+      });
+
+      // 顯示被點擊的內容項目
       festivalContentItems[index].classList.add('active');
+      // 將被點擊的 festival-item 標記為 active-item
+      festivalItems[index].classList.add('active-item');
     });
   });
 </script>
+
              </div>
 <!-- 音樂JavaScript-->
 <script>
@@ -372,19 +390,28 @@ menuItems.forEach((item) => {
 
   // 初始顯示第一個內容
   musicContentItems[0].classList.add('active');
+  musicItems[0].classList.add('active-item'); // 初始時第一個 music-item 標記為 active
 
   musicItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      // Hide all content items
+      // 隱藏所有內容項目
       musicContentItems.forEach(contentItem => {
         contentItem.classList.remove('active');
       });
 
-      // Show the clicked content item
+      // 移除所有 music-item 的 active-item 類別
+      musicItems.forEach(item => {
+        item.classList.remove('active-item');
+      });
+
+      // 顯示被點擊的內容項目
       musicContentItems[index].classList.add('active');
+      // 將被點擊的 music-item 標記為 active-item
+      musicItems[index].classList.add('active-item');
     });
   });
 </script>
+
          </div>
 <!-- 建築屋JavaScript-->
 <script>
@@ -393,60 +420,89 @@ menuItems.forEach((item) => {
 
   // 初始顯示第一個內容
   architectureContentItems[0].classList.add('active');
+  architectureItems[0].classList.add('active-item'); // 初始時第一個 architecture-item 標記為 active
 
   architectureItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      // Hide all content items
+      // 隱藏所有內容項目
       architectureContentItems.forEach(contentItem => {
         contentItem.classList.remove('active');
       });
 
-      // Show the clicked content item
+      // 移除所有 architecture-item 的 active-item 類別
+      architectureItems.forEach(item => {
+        item.classList.remove('active-item');
+      });
+
+      // 顯示被點擊的內容項目
       architectureContentItems[index].classList.add('active');
+      // 將被點擊的 architecture-item 標記為 active-item
+      architectureItems[index].classList.add('active-item');
     });
   });
 </script>
+
      </div>
-     <!-- 米食JavaScript-->
-     <script>
+<!-- 飲食JavaScript -->
+<script>
   const introItems = document.querySelectorAll('.intro-item');
   const contentItems = document.querySelectorAll('.content-item');
 
   // 初始顯示第一個內容
   contentItems[0].classList.add('active');
+  introItems[0].classList.add('active-item'); // 初始時第一個 intro-item 標記為 active-item
 
   introItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      // Hide all content items
+      // 隱藏所有內容項目
       contentItems.forEach(contentItem => {
         contentItem.classList.remove('active');
       });
 
-      // Show the clicked content item
+      // 移除所有 intro-item 的 active-item 類別
+      introItems.forEach(item => {
+        item.classList.remove('active-item');
+      });
+
+      // 顯示被點擊的內容項目
       contentItems[index].classList.add('active');
+      // 將被點擊的 intro-item 標記為 active-item
+      introItems[index].classList.add('active-item');
     });
   });
 </script>
-<!-- 服飾JavaScript-->
+
+<!-- 服飾JavaScript -->
 <script>
   const fashionItems = document.querySelectorAll('.fashion-item');
   const fashionContentItems = document.querySelectorAll('.fashion-content-item');
 
   // 初始顯示第一個內容
   fashionContentItems[0].classList.add('active');
+  fashionItems[0].classList.add('active-item'); // 初始時第一個 fashion-item 標記為 active
 
   fashionItems.forEach((item, index) => {
     item.addEventListener('click', () => {
-      // Hide all content items
+      // 隱藏所有內容項目
       fashionContentItems.forEach(contentItem => {
         contentItem.classList.remove('active');
       });
 
-      // Show the clicked content item
+      // 移除所有 fashion-item 的 active-item 類別
+      fashionItems.forEach(item => {
+        item.classList.remove('active-item');
+      });
+
+      // 顯示被點擊的內容項目
       fashionContentItems[index].classList.add('active');
+      // 將被點擊的 fashion-item 標記為 active-item
+      fashionItems[index].classList.add('active-item');
     });
   });
 </script>
+
+
+
         </div>
     </div>
 </main>
@@ -468,4 +524,66 @@ menuItems.forEach((item) => {
         // 使用 JavaScript 获取当前年份并设置到 span 元素中
         document.getElementById("currentYear").innerHTML = new Date().getFullYear();
     </script>
+   <style>
+  .festival-item {
+    /* 此處設定所有 festival-item 的文字顏色，可以根據需求調整 */
+    color: black;
+  }
+
+  .festival-item.active-item {
+    /* 被選中的 festival-item 的文字顏色 */
+    color: red;
+  }
+         .intro-item {
+    /* 此處設定所有 intro-item 的文字顏色，可以根據需求調整 */
+    color: black;
+    cursor: pointer; /* 添加手指指示符，表明可點擊 */
+  }
+
+  .intro-item.active-item {
+    /* 被選中的 intro-item 的文字顏色 */
+    color: red;
+  }
+       .fashion-item {
+    /* 此處設定所有 intro-item 的文字顏色，可以根據需求調整 */
+    color: black;
+    cursor: pointer; /* 添加手指指示符，表明可點擊 */
+  }
+
+  .fashion-item.active-item {
+    /* 被選中的 intro-item 的文字顏色 */
+    color: red;
+  }
+            .architecture-item {
+    /* 此處設定所有 intro-item 的文字顏色，可以根據需求調整 */
+    color: black;
+    cursor: pointer; /* 添加手指指示符，表明可點擊 */
+  }
+
+  .architecture-item.active-item {
+    /* 被選中的 intro-item 的文字顏色 */
+    color: red;
+  }
+               .music-item {
+    /* 此處設定所有 intro-item 的文字顏色，可以根據需求調整 */
+    color: black;
+    cursor: pointer; /* 添加手指指示符，表明可點擊 */
+  }
+
+  .music-item.active-item {
+    /* 被選中的 intro-item 的文字顏色 */
+    color: red;
+  }
+                   .faith-item {
+    /* 此處設定所有 intro-item 的文字顏色，可以根據需求調整 */
+    color: black;
+    cursor: pointer; /* 添加手指指示符，表明可點擊 */
+  }
+
+  .faith-item.active-item {
+    /* 被選中的 intro-item 的文字顏色 */
+    color: red;
+  }
+</style>
+
 </html>
