@@ -905,6 +905,7 @@ hr {
     width:40%;
     display: flex;
     justify-content:center;
+	flex-direction:column;
 }
 .plt-pic img{
     width:100%;
