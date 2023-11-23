@@ -1,28 +1,54 @@
 /* header styles */
 header {
+    width: 100%;
   display: flex;
     flex-wrap: wrap;
-  padding: 15px 0 15px 0;
-  background-color:#7D4D2C;
+    justify-content: space-around;
+    align-items: center; /* 垂直居中 */
+  padding: 25px 0 25px 0;
+  background-color:#F0E9E1;
   margin: 0; 
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 10px;
+
+}
+#login-status {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    font-size: 20px;
+}
+
+#user-avatar {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px; /* 为头像和用户名之间添加一些右边距 */
 }
 .logo{
     width: 40px;
     height: 30px;
     margin: 0 0 3px 3px;
-    margin-right: auto; /* 将这里修改为 margin-right */
+    float:left;
 }
 .logo img{
     width: 100%;
 }
+.login{
+    padding:0 15px 0 0;
+}
 body{
   margin: 0; 
   padding: 0;
-background-color:#F0E9E1;
+background-color:#FFFFFF;
 }
-
+nav{
+     flex-grow: 1; 
+}
 nav ul {
   display: flex;
+justify-content: center;
   list-style: none;
   margin: 0;
   padding:0;
@@ -35,7 +61,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #3A3A3A;
 }
 
 nav a:hover {
@@ -114,14 +140,59 @@ main {
 .footer_banner{
   width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-direction: column;
-  background-color:#4A7F42;
-    position: relative;
+  background-color:#F0E9E1;
     bottom:0;
-  align-items: center;
-    justify-content: center;
+    padding: 20px;   
+    justify-content: space-evenly;
+          align-items: center;
+}
+.fb{
+     width: 40px; /* 圆圈的宽度 */
+      height: 40px; /* 圆圈的高度 */
+      background-color: #7D4D2C; /* 圆圈的背景颜色 */
+      border-radius: 50%; /* 使其成为圆形 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     margin-right: 10px;
     
+}
+.ig{
+     width: 40px; /* 圆圈的宽度 */
+      height: 40px; /* 圆圈的高度 */
+      background-color: #7D4D2C; /* 圆圈的背景颜色 */
+      border-radius: 50%; /* 使其成为圆形 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    margin-right: 10px;
+    
+}
+.yt{
+     width: 40px; /* 圆圈的宽度 */
+      height: 40px; /* 圆圈的高度 */
+      background-color: #7D4D2C; /* 圆圈的背景颜色 */
+      border-radius: 50%; /* 使其成为圆形 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+}
+.footer-logo{
+    width: 25%;
+}
+.footer-aboutus{
+    width: 75%;
+    display: flex;  
+    justify-content: space-evenly;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+}
+.security-policy{
+    display: flex;
+    flex-direction: column;
 }
 .footerpic{
      display: flex;
@@ -131,11 +202,14 @@ main {
   align-items: center;
     justify-content: center;
 }
+.social-logo{
+    display:flex; 
+}
 .copyright{
-    width: 100%;
     display: flex;
       align-items: center;
     justify-content: center;
+  background-color:#F0E9E1;
 }
 .ics{
     width:30%;
@@ -192,8 +266,25 @@ main {
   background-color: #FFC700;
   z-index: -1;
 }
+.title-text2 {
+  display: inline-block;
+  position: relative;
+    width:100%;
+}
+
+.title-text2::before {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* 调整底线位置和粗细 */
+  left: 0;
+  width: 30%;
+  height: 20px;
+  background-color: #FFC700;
+  z-index: -1;
+}
 .rcactivity{
     display:flex;
+    flex-wrap: wrap;
     width:100%;
     justify-content: space-around;
 }
@@ -461,7 +552,7 @@ main {
     height: 70vh;
     align-content: center;
     justify-content: center;
-    padding:0 
+    padding:0 0 10px 0 ;
 }
 .group{
     display: flex;
@@ -472,19 +563,25 @@ main {
 .grouppic{
     width: 50%;
 }
+
+.group img{
+    width:100%;
+    height: 400px;
+    object-fit: fill;
+}
 .groupif{
     width:40%;
     padding: 0% 0% 0% 1%;
 }
-.group img{
-    width:100%;
-}
 .history{
     width:100%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content:center;
     padding:0% 0% 2% 0%;
+}
+.history1{
+    width:90%;
+    display: flex;
 }
 .ac{
     width:50%;
@@ -493,11 +590,11 @@ main {
     justify-content:center;
 }
 .ac img{
-    width:50%;
+    width:100%;
 }
 .hst{
-    width:40%;
-    padding:0% 0% 0% 0%;
+    width:50%;
+    padding:0% 0% 0% 2%;
 }
 .us1 {
     width: 100%;
@@ -799,18 +896,19 @@ main {
   }
 
 svg {
-    width: 50vw;
+  width: 50vw;
   height: 70vh;
 }
 
 path {
   stroke: white;
-  fill:#008000;
+  fill: #008000;
   transition: 0.5s;
   cursor: pointer;
 }
+
 path:hover {
-  fill: #B99362;
+  fill: #b99362;
   transform: translate(-5px, -5px);
 }
 
@@ -903,9 +1001,6 @@ hr {
 }
 .plt-pic{
     width:40%;
-    display: flex;
-    justify-content:center;
-	flex-direction:column;
 }
 .plt-pic img{
     width:100%;
@@ -956,4 +1051,27 @@ a {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+}
+.introgroup-container{
+    width: 100%;  
+    height: 100%;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+        flex-direction: column;
+}
+.intro1{
+    width: 90%;
+    display: flex;
+}
+.introgroup-pic{
+    width:50%;
+}
+.introgroup-pic img{
+    width: 100%;
+    height: 400px;
+}
+.introgroup-info{
+    width: 50%;
+    padding:0 20px 0 20px;
 }
