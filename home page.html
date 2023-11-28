@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome icons (free version) -->
+    <script src="https://kit.fontawesome.com/9cd404b243.js" crossorigin="anonymous"></script>
+    <script src="testscript.js"></script>
+    <title>首页</title>
+    <style>
+        /* 样式 */
+
+        #message-area {
+            width: 500px;
+            height: 400px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: scroll;
+        }
+
+        .message {
+            background-color: #f2f2f2;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .message-avatar {
+            margin-right: 10px;
+            color: #005eff;
+        }
+
+        .message-username {
+            background-color: #005eff;
+            color: #fff;
+            padding: 2px 4px;
+            border-radius: 5px;
+        }
+
+#user-avatar {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px; /* 为头像和用户名之间添加一些右边距 */
+}
+
+       /* 添加未选择时的星星框样式 */
+/* 添加未选择时的星星框样式 */
+.star {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 26px solid #ddd;
+    display: inline-block;
+    margin-right: 2px;
+    cursor: pointer;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* 添加选择后的填充颜色样式 */
+.star.filled-star {
+    border-bottom: 26px solid #ffd700;
+}
+
+/* 新增星星评分区域的样式 */
+#star-rating {
+    margin: 10px 0;
+}
+
+#star-rating .star {
+    /* 调整星星的样式，使其更为明显 */
+    width: 30px;
+    height: 3px;
+}
+        #user-avatar {
+    max-width: 30px; /* 设置最大宽度 */
+    max-height: 30px; /* 设置最大高度 */
+}
+
+    </style>
+</head>
+<body>
+    <div class="login" id="login-status">
+        <!-- 用户头像和帐户名（或 "未登录，请先登录" 消息） -->
+        <img id="user-avatar" src="用户头像URL" alt="User Avatar">
+        <span id="username-display">帐户名</span>
+    </div>
+
+    <div id="message-area">
+        <!-- 显示登录状态消息 -->
+        <div id="login-status-message"></div>
+
+        <!-- 用户选择星星的区域 -->
+        <div id="star-rating">
+            <!-- 星星元素将在用户选择后添加 -->
+        </div>
+
+        <!-- 如果用户已登录，显示留言输入框 -->
+        <textarea id="message-text" placeholder="输入留言"></textarea>
+        <button id="post-message">发布留言</button>
+
+        <!-- 显示留言列表 -->
+        <div id="messages">
+            <!-- 这里显示留言列表 -->
+        </div>
+    </div>
+
+    <button id="logout-button">登出</button> <!-- 添加登出按钮 -->
+</body>
+</html>

@@ -8,6 +8,9 @@
 <!-- Font Awesome icons (free version)-->
         <script src="https://kit.fontawesome.com/9cd404b243.js" crossorigin="anonymous"></script>
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <script src="testscript1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
         <!-- Google fonts-->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
@@ -15,48 +18,44 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
 <title>Taloma首頁</title>
 <link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/newlogo_有顏色粗線條_黃色_圓形.png" type="image/png">
+
 </head>
     <body>  
 <header>
-  <div class="logo">
-    <img src="images/newlogo_有顏色粗線條_黃色_圓形.png"></div>
+<div class="logo-container">
+    <div class="logo"><a href="Taloma index 1.html">
+        <img src="images/newlogo_有顏色粗線條_黃色_圓形.png" alt="logo">
+    </div>
+    <h1 style="margin: 0; font-size: 26px; color: #070707; padding-left: 5px">TALOMA•回家</h1></a>
+</div>
+
   <nav>
   <ul>
-    <li><a href="Taloma index 1.html">首頁</a></li>
     <li><a href="mappage.html">族群介紹</a></li>
     <li class="dropdown">
-      <a href="#" class="dropbtn">活動資訊</a>
+      <a href="#" class="dropbtn">活動資訊<i class="bi bi-chevron-down"></i></a>
       <div class="dropdown-content">
-        <a href="for the ac test page.html">體驗活動資訊</a>
+        <a href="for the ac test page.html">體驗活動</a>
         <a href="#">講座資訊</a>
+          <a href="introgroup.html">現存青年會</a>
       </div>
     </li>
     <li class="dropdown">
-      <a href="#" class="dropbtn">影音專區</a>
+      <a href="#" class="dropbtn">影音專區<i class="bi bi-chevron-down"></i></a>
       <div class="dropdown-content">
         <a href="Video page.html">TALOMA影音專區</a>
         <a href="othervideo.html">影片推薦</a>
       </div>
     </li>
     <li><a href="about us.html">關於我們</a></li>
-             <div class="social-icons">
-                       <li>  <a class="social-icon" href="https://www.facebook.com/profile.php?id=100090221569990" target="_blank">
-                           <i class="fa-brands fa-facebook"></i>
-                        </a>
-                    </li>
-					<li><a class="social-icon" href="https://www.instagram.com/_taloma_/" target="_blank">
-                            <i class="fa-brands fa-instagram" style="font-size:20px;">
-                        </i>
-                        </a>
-      </li>
-     <li> <a class="social-icon" href="https://www.instagram.com/_taloma_/" target="_blank">
-                            <i class="fa-brands fa-youtube" style="font-size:18px;">
-         </i>  
-         </a>
-                 </li>
-	  </div>
     </ul>
   </nav>
+    <div class="login" id="login-status">
+        <!-- 用户头像和帐户名（或 "未登录，请先登录" 消息） -->
+        <img id="user-avatar" src="用户头像URL" alt="User Avatar">
+        <span id="username-display">帐户名</span>
+    </div>
        <script>
   // 通过 JavaScript 控制下拉菜单的显示和隐藏
 const menuItems = document.querySelectorAll('.has-submenu');
@@ -73,47 +72,79 @@ menuItems.forEach((item) => {
 </header>
         <main>
             <div class="title">
-    <h1 class="title-text">賽德克族青年會</h1>
+    <h1 class="title-text2">太魯閣族學生青年會</h1>
     </div>
             <div class="group">
             <div class="grouppic">
-                <img src="../167506.jpg" alt="acpic">
+                <img src="images/青年會.png" alt="acpic">
                 </div>
             <div class="groupif">
-                <p>團隊成立時間：</p><br>
-                 <p>聯絡方式：</p><br>
-                 <p>社群帳號：</p><br>
+                <p>團隊成立時間：<strong>1999年</strong></p><br>
+                 <p>聯絡方式：地址-花蓮縣秀林鄉富世村8鄰富世145之5號, Hualienhsien, Taiwan, 974
+                     &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;行動電話-0972 963 605<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;電子郵件地址-trukuyouth@gmail.com </p>
+              <br>
+                 <p>社群帳號：網站：<a href="https://sites.google.com/view/truku-youth/">https://sites.google.com/view/truku-youth/</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FB：<a href="https://www.facebook.com/truku.org/about?locale=zh_TW">https://www.facebook.com/truku.org/about?locale=zh_TW </a></p>
+              <br>
                 </div>
             </div>
   <div class="title">
     <h1 class="title-text">活動經歷</h1>
     </div>   
         <div class="history">
+            <div class="history1">
             <div class="ac">
-                <img src="../a17e96b7884bba60c0a2cf9b27f8ee48.png" alt="pic">
+                <img src="images/憲改討論再起！原民的聲音在哪裡？-原民立委制度想像討論會.jpg" alt="pic">
                      </div>
                 <div class="hst">
-                    <h2 class="videotitle3">這裡是影片名稱</h2>
-      <span style="word-break:break-all">蓋伊蓋幹納莎什盒的阿魯巴巴，都莉樂奇爾節趣與膽吉。熊蒼溪柯塔潘尼，蘇多馬斯嚴寧維赫哈諾翁！莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與</span>
+                    <h2 class="videotitle3">憲改討論再起！原民的聲音在哪裡？-原民立委制度想像討論會</h2>
+      <span style="word-break:break-all">時間：2020年6月14日<br><br>
+2020台灣總統大選過後，蔡英文第二任的這四年，推動憲改的聲音再次從民間響起。然而長期以來，對於原住民族在憲改中的想像卻十分薄弱、也缺乏主體性。憲法中除了原則性的原民權利肯認條文外，最直接具體的原民議題就是原住民立委席次與選制選區，這也是每次選舉都是原民社群熱門的討論題目，但僅止於各抒己見的想法表達。
+本次討論會，希望針對原民立委制度的各種想像，做一個深入的交叉討論及分析，討論會的規劃上沒有主講人，而是透過主持人以公民審議的討論方式進行。
+我們發起這次以原住民族為主體的憲改討論會，期待是一個串聯、腦力激盪、逐步形成共識的開始，希望邀請所有對憲改議題有想法的原住民族團體或個人能夠和我們一起串接起來，一起發聲！
+</span>
+                </div>
                 </div>
         </div>
              <div class="history">
+                 <div class="history1">
             <div class="ac">
-                <img src="../a17e96b7884bba60c0a2cf9b27f8ee48.png" alt="pic">
+                <img src="images/第15屆台灣原住民太魯閣族學生青年會會員大會.jpg" alt="pic">
                      </div>
                 <div class="hst">
-                    <h2 class="videotitle3">這裡是影片名稱</h2>
-      <span style="word-break:break-all">蓋伊蓋幹納莎什盒的阿魯巴巴，都莉樂奇爾節趣與膽吉。熊蒼溪柯塔潘尼，蘇多馬斯嚴寧維赫哈諾翁！莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與</span>
+                    <h2 class="videotitle3">第15屆台灣原住民太魯閣族學生青年會會員大會</h2>
+      <span style="word-break:break-all">時間：2018年4月8日<br><br>部落立體地圖製作為學青會這兩年重點工作之一，藉此了解族群歷史、青年或組織相互培力。
+雖然是在做公共的事物，但我們總不停地尋找公共空間，矛盾中有許多省思與社會實踐上的各種嘗試，究竟不同部落的立體地圖長出怎樣的樣貌。
+過程中，我們如何與自我身分認同對話，又如何與部落、家族或是自我接連？我們的田野視野交織了哪些豐富的地景故事？
+最後的最後，要迎接學青會的第16屆~
+
+
+</span>
                 </div>
+                      </div>
         </div>
              <div class="history">
+                 <div class="history1">
             <div class="ac">
-                <img src="../a17e96b7884bba60c0a2cf9b27f8ee48.png" alt="pic">
+                <img src="images/太會聚之花聚篇.jpg" alt="pic">
                      </div>
                 <div class="hst">
-                    <h2 class="videotitle3">這裡是影片名稱</h2>
-      <span style="word-break:break-all">蓋伊蓋幹納莎什盒的阿魯巴巴，都莉樂奇爾節趣與膽吉。熊蒼溪柯塔潘尼，蘇多馬斯嚴寧維赫哈諾翁！莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與莎什盒的阿魯巴巴，都莉樂奇爾節趣與</span>
+                    <h2 class="videotitle3">太會聚之花聚篇</h2>
+      <span style="word-break:break-all">透過太魯閣族學青會的聚會，讓任何想要交流的朋友們一同參與，不限任何族群，可以一起一起分享生活中的樂趣。<br><br>
+日期：2018年12月23日(日)<br>
+時間：13:00 - 22:00<br>
+地點：勒巴克的老屋(花蓮縣萬榮鄉西林村4鄰48號)<br><br>
+活動內容：<br>
+1、一起做吃的(將會開放戶外廚房，帶你的食材一起分享吧。(如需特殊電器，請自備)<br>
+2、沒有主題的分享，想談什麼議題，就談。<br>
+3、沒有所謂的固定觀眾，有人聽就是你的觀眾<br>
+4、沒有特別的講者，你肯分享，你就是講者。<br>
+5、享受音樂及影像(老屋備有投影及小喇叭)<br>
+6、時間夠你好好交流，所以請大家可以將步調放慢，一起享受一起一起的時光。
+</span>
                 </div>
+                      </div>
         </div>
                   <div class="title">
     <h1 class="title-text">本月會員活動</h1>
@@ -122,14 +153,49 @@ menuItems.forEach((item) => {
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTaipei&showTitle=0&showNav=1&src=YTEwOTA3MDAwNEBtYWlsLnNodS5lZHUudHc&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=emgtdHcudGFpd2FuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="90%" height="100%" frameborder="0" scrolling="no" ></iframe>
                 </div>
         </main>
-        
 <div class="footer_banner" id="contact">
-  <div class="ics">
-      <img src="images/資傳系LOGO(系網版).png" alt="ics">
-  </div>
-  <div class="sclogo" > 
-      <img src="images/logo-校徽+中英文字(去背).png" alt="shu">
-    </div>
-</div>
+ <div class="footer-logo">
+     <div class="footer-logo1">
+    <img src="images/footer.png" alt="logo"></div></div>
+     <div class="footer-aboutus">
+         <div class="detail">
+             <h3 style="color:#7D4D2C">關於我們</h3>
+             <span><a href="#">隱私權政策</a></span>
+                 <span><a href="#">著作權聲明</a></span>
+                     <span><a href="#">徵才資訊</a></span>
+                          <span><a href="#">投稿專區</a></span>
+                             <span><a href="#">聯絡我們</a></span>
+         </div>
+         <div class="security-policy">
+             <h3 style="color:#7D4D2C">安全政策</h3>
+             <span><a href="#">網站資訊安全政策</a></span>
+                 <span><a href="#">隱私權保護政策</a></span>
+                     <span><a href="#">政府網站資料開放宣告</a></span>
+                        <span><a href="#">網站管理規範與著作權聲明</a></span>
+         </div>
+         <div class="social-icon">
+             
+             <h3 style="color:#7D4D2C">追蹤我們</h3><div class="social-logo">
+             <div class="fb"> <a class="social-icon" href="https://www.facebook.com/profile.php?id=100090221569990" target="_blank">
+                 <i class="fa-brands fa-facebook-f" style="color: #ffffff; font-size:25px;"></i></a></i></div>
+             <div class="ig">
+                 <a class="social-icon" href="https://www.instagram.com/_taloma_/" target="_blank">
+                            <i class="fa-brands fa-instagram" style="color: #ffffff; font-size:25px;"></a></i></div>
+                                <div class="yt"> <a class="social-icon" href="https://www.youtube.com/@_taloma_" target="_blank">
+                           <i class="fa-brands fa-youtube" style="color: #ffffff; font-size:25px;"></a></i></div>
+                 </div>
+         </div>
+     </div>
+       
+        </div>
+     <div class="copyright">
+        <span>&copy; <span id="currentYear"></span> [owner]. All rights reserved.
+    </span>
+         </div>
+    <script>
+        // 使用 JavaScript 获取当前年份并设置到 span 元素中
+        document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+
 </body>
 </html>

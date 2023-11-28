@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>连连看游戏</title>
+    <style>
+        /* 样式可以根据需要进行修改 */
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-template-rows: repeat(5, 80px);
+            gap: 4px;
+        }
+        .game-board div {
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .apple { background-color: red; }
+        .watermelon { background-color: green; }
+        .pear { background-color: yellow; }
+        .grape { background-color: purple; }
+        .orange { background-color: orange; }
+    </style>
+</head>
+<body>
+    <div id="score">分数: 0</div>
+    <div id="timer">剩余时间: 60秒</div>
+    <div class="game-board" id="game-board">
+        <!-- 游戏板格子 -->
+    </div>
+    <script>
+        var score = 0;
+        var timeLimit = 60;
+        var timer = null;
+        var selected = null;
+        var selectedClass = '';
+        var gameBoard = document.getElementById("game-board");
+        var icons = ["apple", "watermelon", "pear", "grape", "orange", "apple", "watermelon", "pear", "grape", "orange"];
+
+        function shuffleArray(array) {
+            for (var i = array.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+
+        function updateScore(points) {
+            score += points;
+            document.getElementById("score").textContent = "分数: " + score;
+        }
+
+        function resetBoard() {
+            shuffleArray(icons);
+            gameBoard.innerHTML = '';
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < 5; j++) {
+                    var cell = document.createElement("div");
+                    cell.className = icons[i * 5 + j];
+                    cell.canBeClicked = true;
+                    cell.isRemoved = false;
+                    gameBoard.appendChild(cell);
+                }
+            }
+        }
+
+        function startGame() {
+            resetBoard();
+            updateScore(0);
+            timeLimit = 60;
+            document.getElementById("timer").textContent = "剩余时间: " + timeLimit + "秒";
+            clearInterval(timer);
+            timer = setInterval(function() {
+                timeLimit--;
+                document.getElementById("timer").textContent = "剩余时间: " + timeLimit + "秒";
+                if (timeLimit <= 0) {
+                    clearInterval(timer);
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function endGame() {
+            alert("游戏结束，总分: " + score);
+        }
+
+        gameBoard.addEventListener('click', function(e) {
+            var cell = e.target;
+            if (cell.tagName === 'DIV' && cell.canBeClicked && !cell.isRemoved) {
+                if (cell === selected) {
+                    cell.style.backgroundColor = '';
+                    selected = null;
+                } else if (!selected) {
+                    selected = cell;
+                    selectedClass = cell.className;
+                    cell.style.backgroundColor = 'lightblue';
+                } else if (cell.className === selectedClass) {
+                    cell.style.backgroundColor = '';
+                    selected.style.backgroundColor = '';
+                    cell.innerHTML = '';
+                    selected.innerHTML = '';
+                    cell.className = '';
+                    selected.className = '';
+                    cell.isRemoved = true;
+                    selected.isRemoved = true;
+                    updateScore(10);
+                    selected = null;
+                } else {
+                    selected.style.backgroundColor = '';
+                    selected = cell;
+                    selectedClass = cell.className;
+                    cell.style.backgroundColor = 'lightblue';
+                }
+            }
+        });
+
+        startGame();
+    </script>
+</body>
+</html>

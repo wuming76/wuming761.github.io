@@ -70,67 +70,51 @@ menuItems.forEach((item) => {
 
 </script>
 </header>
-<style>
-    /* 移除超链接颜色 */
-a {
-    color: inherit;
-    text-decoration: none;
+    <style>
+/* Tooltip 容器 */
+.tooltip {
+    position: relative;
+    display: inline-block;
 }
-/* 如果需要在悬停时应用不同的颜色 */
-a:hover {
-    color:#F80004;
+ 
+/* Tooltip 文本 */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* 定位 */
+    position: absolute;
+    z-index: 1;
 }
-
-        </style>
-<main>
-    <div class="title">
-    <h1 class="title-text">前情提要</h1>
-    </div>
-  <div class="content-container">
-    <div class="video-container">
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class="embed-container"><iframe  src="https://www.youtube.com/embed/O_A4FF0NKeU?si=9a8hpUVJ1yH-zvyS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-      <!-- insert your video here -->
-    </div>
-  </div>
-    <div class="title">
-    <h1 class="title-text">熱門活動</h1>
-    </div>
-        <div class="rcactivity">
-        <div class="rcacty"><a href="https://south-i-2022.mystrikingly.com/?fbclid=IwAR1BuqN9ccO8SqvHawLBUJ7bl77xH1uFKJibzzsTzwXECtInsQZvxxOqw-0" target="_blank">
-          <img src="https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/1779334/393983_27235.jpeg" alt="acpic">
-            <h2 class="actitle1">2023年中臺灣原住民族文化體驗坊</h2>
-                </a>
+ 
+/* 鼠标移动上去后显示提示框 */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
+</header>
+<body>
+   <div class="title">
+       <h1 class="title-text">青年會<div class="tooltip"><i class="bi bi-info-circle" style="font-size:20px; padding-left: 5px;">
+           <span class="tooltiptext">青年會是abcdefg</span></div></i></h1>
+    </div> 
+    <div class="introgroup-container">
+        <div class="intro1">
+        <div class="introgroup-pic"><a  href="groupage.html">
+        <img src="images/青年會.png" alt="group"></div>
+        <div class="introgroup-info">
+                    <h2 class="videotitle3">憲改討論再起！原民的聲音在哪裡？-原民立委制度想像討論會</h2></a>
+            <span style="word-break:break-all">本會宗旨為結合認同且關心原住民族之青年學生，提升原住民族青年之自尊、自信與自我認同。此外，保存文化且積極推廣之亦為會目的之一，更殷切盼望能培養有潛力之原住民族人才。台灣原住民族學生青年會是依《人民團體法》所組成的原住民團體，並已於1999年完成於內政部立案登記。目前有理事9位，監事3位，理事會下設有秘書處，負責執行理事會的決議。</span>
         </div>
-                
-            <div class="rcacty"><a href="https://www.facebook.com/FunWayAljungic/posts/pfbid02Gxfgo5SYicfKDMaLaMQxnygnoDLYU5on1qHFZWAvL4weYAv4McBH6xdYn7MPy2rUl" target="_blank">
-          <img src="images/豐年祭.jpg" alt="acpic">
-                 <h2 class="actitle1">2023 花蓮縣原住民族聯合豐年節</h2>
-                </a>
-                </div>
-            <div class="rcacty"><a href="https://www.facebook.com/TORIK.EPA/posts/pfbid0AgHky1T1HLaLx5FocjriY83yVsihsY2M5nrJHmEdzjQdDiv84VtHjDbkovDgsZogl" target="_blank">
-          <img src="images/wawa.jpg" alt="acpic">
-                 <h2 class="actitle1">2023 都歷山海的wawa文化夏令營</h2>
-                 </a>
-                </div>
-    </div>
-     <div class="rcactivity">
-        <div class="rcacty"><a href="https://tiprc.cip.gov.tw/blog_wp/?p=20543" target="_blank">
-          <img src="https://tiprc.cip.gov.tw/blog_wp/wp-content/uploads/2023/05/content-1-1.jpg" alt="acpic">
-                 <h2 class="actitle1">尋回原路：西拉雅族的正名之路</h2>
-             </a>
         </div>
-            <div class="rcacty"><a href="https://event.culture.tw/TTCSEC/portal/Registration/C0103MAction?actId=30009" target="_blank">
-          <img src="https://event.culture.tw/userFiles/TTCSEC/JpgFile/01/30009/30009_276_175.jpg?20230923" alt="acpic">
-                 <h2 class="actitle1">「行之有年」花東生活在文字以前</h2>
-                 </a>
-                </div>
-            <div class="rcacty"><a href="https://www.opentix.life/event/1580511276547969028" target="_blank">
-          <img src="https://s3.resource.opentix.life/upload/program/1675249518888EjLF7zrQIx.png" alt="acpic">
-                 <h2 class="actitle1">布拉瑞揚舞團《我．我們》第一部曲</h2>
-                 </a>
-                </div>
-    </div>
-</main>
+        
+    
+         </div>  
 <div class="footer_banner" id="contact">
  <div class="footer-logo">
      <div class="footer-logo1">

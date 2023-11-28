@@ -74,23 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             userAvatarElement.src = "默认头像URL"; // 设置默认头像URL，替代<i class>的部分
         }
-            
+
         loginStatusElement.innerHTML = `
-            <div class="dropdown1" style="float:right;">
-                <img id="user-avatar" src="${userAvatar}" alt="User Avatar">
-                    <span id="username-display">${username}</span><i class="bi bi-chevron-down"></i>
-                        <div class="dropdown-content1">
-                            <button id="logout-button">登出</button> <!-- 添加登出按钮 -->
-                                </div>
-                                    </div>
+            <img id="user-avatar" src="${userAvatar}" alt="User Avatar">
+            <span id="username-display">${username}</span>
         `;
     } else {
-    // 如果用户未登录，隐藏用户头像和帐户名的元素
-    document.getElementById("user-avatar").style.display = "none";
-    document.getElementById("username-display").style.display = "none";
-
-    // 显示 "注册 | 登录" 的链接
-    loginStatusElement.innerHTML = '<a href="https://www.figma.com/proto/yQ3G2LpyJ2Kuzrw6vB7qHD/TALOMA%E7%B6%B2%E7%AB%99?type=design&node-id=880-179&t=aXFtTHDdyOREwnnH-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A3">注册</a> | <a href="login.html">登入</a>';
+        loginStatusElement.innerHTML = '<a href="https://www.figma.com/proto/yQ3G2LpyJ2Kuzrw6vB7qHD/TALOMA%E7%B6%B2%E7%AB%99?type=design&node-id=880-179&t=aXFtTHDdyOREwnnH-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A3">注冊</a> | <a href="login.html">登录</a>';
     }
 
     // 处理登出按钮点击事件

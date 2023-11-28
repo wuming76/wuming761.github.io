@@ -132,28 +132,58 @@ var place_data=[
   },
 ]
 ;
-
 var vm = new Vue({
-  el: "#app",
-  data: {
-    filter: "",
-    place_data: place_data
-  },computed:{
-    now_area: function(){
-      var vobj=this;
-      var result=this.place_data.filter(function(obj){
-        return obj.tag==vobj.filter;
-      });
-      if (result.length==0){
-        return null;
-      }
-      return result[0];
-    }
-  }
-});
+      el: "#app",
+      data: {
+        filter: "",
+        place_data: place_data,
+      },
+      computed: {
+        now_area: function () {
+          var vobj = this;
+          var result = this.place_data.filter(function (obj) {
+            return obj.tag == vobj.filter;
+          });
+          if (result.length == 0) {
+            return null;
+          }
+          return result[0];
+        },
+      },
+      methods: {
+        drawDensityMap: function () {
+          var canvas = document.getElementById("densityMap");
+          var ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-$("path").mouseenter(function(e){
-  var tagname=$(this).attr("data-name");
-  vm.filter=tagname;
+          // 獲取總人口數，用於計算人口密度
+          var totalPopulation = this.place_data.reduce(function (total, area) {
+            return total + parseInt(area.population.replace(",", ""));
+          }, 0);
 
-});
+          this.place_data.forEach(function (area) {
+            var population = parseInt(area.population.replace(",", ""));
+            var density = population / totalPopulation;
+
+            var pathElement = document.querySelector('[data-name="' + area.tag + '"]');
+            if (pathElement) {
+              var boundingBox = pathElement.getBoundingClientRect();
+              var x = boundingBox.left + window.scrollX;
+              var y = boundingBox.top + window.scrollY;
+
+              ctx.fillStyle = `rgba(0, 128, 0, ${density})`;
+              ctx.fillRect(x, y, boundingBox.width, boundingBox.height);
+            }
+          });
+        },
+      },
+      mounted: function () {
+        this.drawDensityMap();
+      },
+    });
+
+    $("path").mouseenter(function (e) {
+      var tagname = $(this).attr("data-name");
+      vm.filter = tagname;
+      vm.drawDensityMap();
+    });
