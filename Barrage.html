@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>dm</title>
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body >
+    <style>
+        body{
+            background-color: #FFE9CA;
+            background-image: url('images/S__2433211.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+      body::-webkit-scrollbar {
+    display: none;
+}
+    		#wrapper{
+			position: relative;
+			width: auto;
+			height: 550px;
+			/*margin: 16px;*/
+			border: 1px solid #333;
+			border-radius: 4px;
+			box-sizing:border-box;
+			overflow: hidden;
+		}
+		.center-box{
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+		}
+		input[name="say"],.btn{
+			margin: 10px auto;
+			padding: 10px 20px;
+			border: 1px solid #eee;
+			border-radius: 4px;
+		}
+		.btn-primary{
+			background-color: #51a3f0;
+			color: #fff;
+		}
+
+		@keyframes move{
+			to{
+				left: -200px;
+			}
+		}</style>
+    <div class="barrage-title" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+        
+    <h1> 記憶中的家鄉</h1></div>
+    	<!-- 弹幕墙 -->
+	<div id="wrapper">
+
+	</div>
+
+	<!-- input -->
+	<section class="center-box">
+		<input type="text" name="say" id="sendMesg" placeholder="say something...">
+	</section>
+
+	<!-- btn -->
+	<section class="center-box">
+		<button id="send" class="btn btn-primary">发射</button>
+		<button id="clear" class="btn">清屏</button>
+	</section>
+    <script>
+    	var $ = function(id){
+			return document.getElementById(id);
+		};
+
+		// data
+		var playList = [{
+			// 内容
+			text: '臺北物價很高QAQ',
+			// 弹幕颜色
+			color: 'red',
+			//弹幕文字的大小
+			size: 20,
+			//从何时开始
+			time: 0,
+			// 经过实践
+			duration: 10,
+			//舞台偏移的高度
+			top:140
+		},
+		{
+			text: '基隆不要再下雨了！',
+			color: 'blue',
+			size: 16,
+			time: 40,
+			duration: 15,
+			top:200
+		},
+		{
+			text: '我的博客：sammieho.github.io 要来参观噢',
+			color: '#000',
+			size: 16,
+			time: 500,
+			duration: 20,
+			top:250
+		}];
+
+		// variable
+		var LEFT = document.body.clientWidth;
+		console.log(LEFT);
+		const playerColors = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"];
+		var actorList = " ";
+
+
+		// init
+		(function(){
+
+			// setInterval(function(){
+				render();
+
+			// },1500);
+
+		})();
+
+
+		// progress
+
+		// 添加演员
+		function addActors( text ){
+
+			this.text = text;
+			var addActor = {
+				text: this.text,
+				color: playerColors[ Math.floor( Math.random() * playerColors.length )],
+				size: Math.ceil( Math.random() * 20 ) + 10 + "px",
+				time: Math.ceil( Math.random() * 100 ),
+				duration: Math.ceil( Math.random() * 30 ) + 10,
+				top: Math.floor( Math.random() * 500 )
+			};
+
+			playList.push(addActor);
+			updateRender();
+		}
+
+
+		// 渲染舞台stage
+		function render(){
+			$("wrapper").innerHTML = " ";
+			for(var i = 0; i < playList.length; i++){
+				actorList +="<div style=\"color:" + playList[i].color + ";font-size: " + playList[i].size + "px;position: absolute;min-width:400px;animation-iteration-count: infinite;animation-name: move;animation-duration:" + playList[i].duration + "s;" + "left:" + LEFT + "px;top: " + playList[i].top + "px;\" class=\"danmu\">" + playList[i].text + "</div>"
+			}
+
+			$("wrapper").innerHTML += actorList;
+			actorList = "";
+ 		}
+
+ 		// update insert
+ 		function updateRender(){
+ 			var newNode = document.createElement("div");
+ 			newNode.innerHTML = playList[playList.length-1].text;
+ 			newNode.style.color = playList[playList.length-1].color;
+ 			newNode.style.fontSize = playList[playList.length-1].size;
+ 			newNode.style.position = "absolute";
+ 			newNode.style.left = LEFT + "px";
+ 			newNode.style.top = playList[playList.length-1].top + "px";
+ 			newNode.style.minWidth = "400px";
+ 			newNode.style.animation = "move" + " " + playList[playList.length-1].duration + "s";
+ 			newNode.style.animationIterationCount = "infinite";
+ 			$("wrapper").appendChild(newNode);
+ 		}
+
+ 		//commen used
+ 		var EvenUtils = {
+
+ 			addEvent: function( element , type, handler ){
+ 				if ( element.addEventListener ) {
+ 					return element.addEventListener( type, handler, false);
+ 				}else if(element.attachEvent){
+ 					return element.attachEvent( "on" + type, handler);
+ 				}else{
+ 					return element["on" + type] = handler;
+ 				}
+ 			}
+ 		};
+
+
+		// 事件绑定
+		EvenUtils.addEvent( $("send"), "click", sendBtnPress );
+		EvenUtils.addEvent( $("sendMesg"), "keypress", sendEnterPress );
+		EvenUtils.addEvent( $("clear"), "click", clearBtnPress );
+
+		// handler
+
+		function sendBtnPress(e){
+
+			if( !$("sendMesg").value ){
+				console.log("please input smething");
+			}else{
+				// do something..
+				addActors( $("sendMesg").value );
+				$("sendMesg").value = "";
+			}
+		}
+
+		function sendEnterPress(e){
+			if( e.keyCode == 13 ){
+				sendBtnPress();
+			}
+		}
+
+		function clearBtnPress(e){
+			$("wrapper").innerHTML = "";
+			playList = [];
+		}
+    </script>
+</body>
+</html>

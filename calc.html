@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <title>Click Count Dashboard</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>页面</th>
+            <th>点击次数</th>
+        </tr>
+        <tbody id="allClickCountsContainer"></tbody>
+    </table>
+
+    <script>
+        var allClickCounts = JSON.parse(localStorage.getItem('allClickCounts')) || {};
+        var allClickCountsContainer = document.getElementById('allClickCountsContainer');
+
+        for (var page in allClickCounts) {
+            if (allClickCounts.hasOwnProperty(page)) {
+                var row = document.createElement('tr');
+                row.innerHTML = `<td>${page}</td><td>${allClickCounts[page]} 次</td>`;
+                allClickCountsContainer.appendChild(row);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- Font Awesome icons (free version)-->
+        <script src="https://kit.fontawesome.com/9cd404b243.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <script src="testscript1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Google fonts-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+<title>Taloma首頁</title>
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/newlogo_有顏色粗線條_黃色_圓形.png" type="image/png">
+
+</head> 
+<header>
+<div class="logo-container">
+    <div class="logo"><a href="Taloma index 1.html">
+        <img src="images/newlogo_有顏色粗線條_黃色_圓形.png" alt="logo">
+    </div>
+    <h1 style="margin: 0; font-size: 23px; color: #070707; padding-left: 5px">TALOMA•回家</h1></a>
+</div>
+
+  <nav>
+  <ul>
+    <li><a href="mappage.html">族群介紹</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">活動資訊<i class="bi bi-chevron-down"></i></a>
+      <div class="dropdown-content">
+        <a href="for the ac test page.html">體驗活動</a>
+        <a href="#">講座資訊</a>
+          <a href="introgroup.html">現存青年會</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">影音專區<i class="bi bi-chevron-down"></i></a>
+      <div class="dropdown-content">
+        <a href="Video page.html">TALOMA影音專區</a>
+        <a href="othervideo.html">影片推薦</a>
+      </div>
+    </li>
+       <li><a href="game.html">小游戲</a></li>
+    <li><a href="about us.html">關於我們</a></li>
+    </ul>
+  </nav>
+    <div class="login" id="login-status">
+        <!-- 用户头像和帐户名（或 "未登录，请先登录" 消息） -->
+        <img id="user-avatar" src="用户头像URL" alt="User Avatar">
+        <span id="username-display">帐户名</span>
+    </div>
+       <script>
+  // 通过 JavaScript 控制下拉菜单的显示和隐藏
+const menuItems = document.querySelectorAll('.has-submenu');
+
+menuItems.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+    const submenu = item.querySelector('.submenu');
+    submenu.classList.toggle('show');
+  });
+});
+
+</script>
+</header>
+<body>
+    <style>
+    * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+background-color:#FFFFFF;
+}
+
+.memory-game {
+  width:80%;
+  height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  margin-top: 0;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: auto;
+  margin: 5px;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.memory-card:active {
+  -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  -o-transition: transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.memory-card.flip {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  position: absolute;
+  border-radius: 5px;
+  background: #c2e5e0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+    object-fit: contain;
+}
+.front-face,
+.back-face img{
+object-fit:contain;
+}
+.front-face {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+        .back-face:hover {
+  /* 在悬停时显示的新图像路径 */
+            background-size: contain; /* 新图像适应容器，保持原始比例 */
+  background-position: center; /* 新图像居中显示 */
+              background-repeat: no-repeat; /* 防止图像重复 */
+            
+}
+        
+ .copyright{
+  width: 100%;
+  background-color:#F0E9E1;
+}
+    </style>
+     <div class="title">
+    <h1 class="title-text">小游戲專區</h1>
+    </div>
+    <section class="memory-game">
+      <div class="memory-card" data-framework="react">
+        <img class="front-face" src="images/鄒族.png" alt="React" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="react">
+        <img class="front-face" src="images/鄒族.png" alt="React" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="images/達悟族.png" alt="Angular" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="images/達悟族.png" alt="Angular" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="images/賽德克.png" alt="Ember" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="images/賽德克.png" alt="Ember" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="images/太魯閣.png" alt="Vue" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="images/太魯閣.png" alt="Vue" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="images/佈農族.png" alt="Backbone" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="images/佈農族.png" alt="Backbone" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="images/排灣族.png" alt="Aurelia" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="images/排灣族.png" alt="Aurelia" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+        <div class="memory-card" data-framework="vue1">
+        <img class="front-face" src="images/泰雅族.png" alt="Vue" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="vue1">
+        <img class="front-face" src="images/泰雅族.png" alt="Vue" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+        <div class="memory-card" data-framework="vue2">
+        <img class="front-face" src="images/族別2.png" alt="Vue" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+
+      <div class="memory-card" data-framework="vue2">
+        <img class="front-face" src="images/族別2.png" alt="Vue" />
+        <img class="back-face" src="images/吉祥物2(終).png" alt="Memory Card" />
+      </div>
+    </section>
+   
+     <div class="datafrom">
+    <div class="dataplace">
+        <span>圖片來源：<a href="https://www.mocataipei.org.tw/tw/ExhibitionAndEvent/Info/第二屆2014*Pulima獎" target="_blank">Pulima藝術獎</a></span>
+        </div></div>
+    <script>
+    const cards = document.querySelectorAll('.memory-card');
+
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+  // 剛剛沒配對成功的話，就把牌蓋起來
+  if (lockBoard) return;
+
+  // 避免翻同一張牌當做第二張
+  if (this === firstCard) return;
+  
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this; // this => the clicked card
+    return;
+  }
+
+  secondCard = this;
+
+  checkForMatch();
+}
+
+function checkForMatch() {
+  // 如果牌組配對成功 => isMatch
+  // 就不可以再點擊那組牌 => disableCards()
+  // 配對錯誤就把該牌組蓋起來 => unflipCards()
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+  isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+  // 移除監聽事件，釋放記憶體
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  // 把牌蓋起來
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 16);
+    card.style.order = randomPos;
+  });
+})();
+
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+    </script>
+   <div class="footer_banner" id="contact">
+ <div class="footer-logo">
+     <div class="footer-logo1">
+    <img src="images/footer.png" alt="logo"></div></div>
+     <div class="footer-aboutus">
+         <div class="detail">
+             <h3 style="color:#7D4D2C">關於我們</h3>
+             <span><a href="#">隱私權政策</a></span>
+                 <span><a href="#">著作權聲明</a></span>
+                     <span><a href="#">外部相關資訊</a></span>
+                          <span><a href="#">投稿專區</a></span>
+                             <span><a href="#">聯絡我們</a></span>
+         </div>
+         <div class="security-policy">
+             <h3 style="color:#7D4D2C">安全政策</h3>
+             <span><a href="#">網站資訊安全政策</a></span>
+                 <span><a href="#">隱私權保護政策</a></span>
+                     <span><a href="#">政府網站資料開放宣告</a></span>
+                        <span><a href="#">網站管理規範與著作權聲明</a></span>
+         </div>
+         <div class="social-icon">
+             
+             <h3 style="color:#7D4D2C">追蹤我們</h3><div class="social-logo">
+             <div class="fb"> <a class="social-icon" href="https://www.facebook.com/profile.php?id=100090221569990" target="_blank">
+                 <i class="fa-brands fa-facebook-f" style="color: #ffffff; font-size:25px;"></i></a></i></div>
+             <div class="ig">
+                 <a class="social-icon" href="https://www.instagram.com/_taloma_/" target="_blank">
+                            <i class="fa-brands fa-instagram" style="color: #ffffff; font-size:25px;"></a></i></div>
+                                <div class="yt"> <a class="social-icon" href="https://www.youtube.com/@_taloma_" target="_blank">
+                           <i class="fa-brands fa-youtube" style="color: #ffffff; font-size:25px;"></a></i></div>
+                 </div>
+         </div>
+     </div>
+       
+        </div>
+     <div class="copyright">
+        <span>&copy; <span id="currentYear"></span> [owner]. All rights reserved.
+    </span>
+         </div>
+    <script>
+        // 使用 JavaScript 获取当前年份并设置到 span 元素中
+        document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+</html>

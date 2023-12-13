@@ -47,8 +47,8 @@ header a:hover {
     margin-right: 10px; /* 为头像和用户名之间添加一些右边距 */
 }
 .logo{
-    width: 40px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     margin: 0 0 3px 3px;
     float:left;
 }
@@ -72,7 +72,6 @@ justify-content: center;
   list-style: none;
   margin: 0;
   padding:0;
-
 }
 
 nav li {
@@ -1205,7 +1204,7 @@ a {
 .detail-pic img{
     width: 98%;
     max-height:500px;
-    object-fit: fill;
+    object-fit: contain;
 }
 .detail-info{
     width: 45%;
@@ -1224,4 +1223,11 @@ a {
 }
 .fully-details{
     width: 90%;
+}
+.datafrom {
+    padding: 5px;
+    margin-right: 0;
+}
+.dataplace{
+    
 }

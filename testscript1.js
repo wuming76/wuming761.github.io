@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("username-display").style.display = "none";
 
     // 显示 "注册 | 登录" 的链接
-    loginStatusElement.innerHTML = '<a href="https://www.figma.com/proto/yQ3G2LpyJ2Kuzrw6vB7qHD/TALOMA%E7%B6%B2%E7%AB%99?type=design&node-id=880-179&t=aXFtTHDdyOREwnnH-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A3">注册</a> | <a href="login.html">登入</a>';
+    loginStatusElement.innerHTML = '<a href="https://www.figma.com/proto/yQ3G2LpyJ2Kuzrw6vB7qHD/TALOMA%E7%B6%B2%E7%AB%99?type=design&node-id=880-179&t=aXFtTHDdyOREwnnH-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A3">註冊</a> | <a href="login.html">登入</a>';
     }
 
     // 处理登出按钮点击事件
@@ -267,3 +267,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+// shared.js
+
+// 获取所有页面的点击次数
+var allClickCounts = JSON.parse(localStorage.getItem('allClickCounts')) || {};
+
+// 如果 'allClickCounts' 不存在于本地存储中，初始化为一个空对象
+if (!('allClickCounts' in localStorage)) {
+    localStorage.setItem('allClickCounts', JSON.stringify(allClickCounts));
+}
+
+// 获取当前页面的相对路径和标题
+var currentPage = window.location.pathname.replace(/^.*[\\\/]/, '');
+var currentTitle = document.title;
+
+// 如果当前页面的点击次数不存在，设置为0
+allClickCounts[currentPage] = allClickCounts[currentPage] || 0;
+
+// 增加当前页面的点击次数并更新本地存储
+allClickCounts[currentPage]++;
+localStorage.setItem('allClickCounts', JSON.stringify(allClickCounts));
