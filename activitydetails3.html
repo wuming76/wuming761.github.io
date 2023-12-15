@@ -16,7 +16,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-<title>關於我們</title>
+<title>活動詳情</title>
 <link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="images/newlogo_有顏色粗線條_黃色_圓形.png" type="image/png">
 
@@ -70,85 +70,133 @@ menuItems.forEach((item) => {
 
 </script>
 </header>
+<style>
 
-<main>
-    <div class="title">
-    <h1 class="title-text">關於我們</h1>
-     </div>
-  <div class="uscontainer">
-    <div class="us1">
-        <h1><i class="fa-solid fa-circle fa-lg" style="color: #ffc700; vertical-align: middle;"></i> 專案背景</h1>
+        /* 样式 */
+
+        #message-area {
+            width: 70%;
+            height: 400px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow: scroll;
+            border-radius: 25px;
+        }
+
+        .message {
+            background-color: #f2f2f2;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .message-avatar {
+            margin-right: 10px;
+            color: #005eff;
+        }
+
+        .message-username {
+            background-color: #005eff;
+            color: #fff;
+            padding: 2px 4px;
+            border-radius: 5px;
+        }
+
+#user-avatar {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px; /* 为头像和用户名之间添加一些右边距 */
+}
+
+       /* 添加未选择时的星星框样式 */
+/* 添加未选择时的星星框样式 */
+.star {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 26px solid #ddd;
+    display: inline-block;
+    margin-right: 2px;
+    cursor: pointer;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* 添加选择后的填充颜色样式 */
+.star.filled-star {
+    border-bottom: 26px solid #ffd700;
+}
+
+/* 新增星星评分区域的样式 */
+#star-rating {
+    margin: 10px 0;
+}
+
+#star-rating .star {
+    /* 调整星星的样式，使其更为明显 */
+    width: 40px;
+    height: 3px;
+}
+        #user-avatar {
+    max-width: 30px; /* 设置最大宽度 */
+    max-height: 30px; /* 设置最大高度 */
+}
+
+    </style>
+<body>
+   <div class="title">
+    <h1 class="title-text">活動介紹</h1>
     </div>
-    <div class="us1-1">
-        <div class="centered-content">
-            <span>近年來隨著台灣社會的發展，政府積極推廣原住民文化，使人們開始意識到原住民文化流失及失傳的問題，越來越多的都市原住民青年逐漸有了探索自身文化的意識，<br>因此想透過推廣傳統文化，減少文化流失。除此之外，不少都市原住民青年想要透過自己在都市所學的技術與知識回饋給部落，為部落的發展和經濟做出貢獻。</span>
+    <div class="acdetail">
+        <div class="detail-pic">
+    <img src="https://s3.resource.opentix.life/upload/program/1693549306386ann41mucDM.jpeg" alt="pic">
+        </div>
+        <div class="detail-info">
+    <h2 class="videotitle1" style="word-break:break-all; font-size:26px;"><a href="https://www.opentix.life/event/1694907127816781825" target="_blank">無限循環</a></h2>
+             <span style="word-break:break-all; font-size:20px;">主辦單位：花蓮縣文化局<br><br>
+活動地點：花蓮縣 花蓮市 文復路6號台北市 中正區 羅斯福路四段92號10樓<br><br>
+活動日期：<br>
+•2023太平洋左岸藝術季10/14（六）19:30@花蓮文化局演藝廳<br>
+•臺北專場演出11/17（五）、11/18（六）19:30@臺北市水源劇場</span>
+        </div>
+          </div>
+        <div class="full-detail">
+        <div class="fully-details">
+             <span style="word-break:break-alll;font-size:15px;">迴旋於樂舞間 徜翔古韻無限的境意<br><br>
+                 
+  《∞-無限循環》為莊國鑫原住民舞蹈劇場成立18年第六支現當代舞蹈劇場舞作，以臺灣原住民族阿美族ilisin(豐年祭)男子年齡階層樂舞為基底，粹選ilisin祭儀樂舞「無限循環」之意象，藉由《∞》以指涉樂舞無邊界概念，展演現當代阿美族樂舞肢體樣態，奠基在時空無窮的哲學概念和無限神靈的循環現象。在阿美族ilisin古謠樂音重複吟唱襯托下，展現阿美族人現當代肢體新樣貌。《∞-無限循環 》試圖將臺灣原住民族阿美族ilisin樂舞突破與更臻層次的實踐。</span>
+            </div></div>
+     <div class="title">
+    <h1 class="title-text">活動評價</h1>
+    </div>
+    <div class="comment">
+    <div id="message-area">
+        <!-- 显示登录状态消息 -->
+        <div id="login-status-message"></div>
+
+        <!-- 用户选择星星的区域 -->
+        <div id="star-rating">
+            <!-- 星星元素将在用户选择后添加 -->
+        </div>
+
+        <!-- 如果用户已登录，显示留言输入框 -->
+        <textarea id="message-text" placeholder="输入留言"></textarea>
+        <button id="post-message">发布留言</button>
+
+        <!-- 显示留言列表 -->
+        <div id="messages">
+            <!-- 这里显示留言列表 -->
         </div>
     </div>
 </div>
-<div class="uscontainer">
-    <div class="us1">
-        <h1><i class="fa-solid fa-circle fa-lg" style="color: #ffc700; vertical-align: middle;"></i> 專案目標</h1>
-    </div>
-    <div class="us1-1">
-        <div class="centered-content">
-            <span>近程目標：透過整合及加值資訊，提供一個創新、資訊正確並有深度的平台，使得都市原住民青年能夠有一個便利的管道得以獲得資訊、更深入了解原住民文化及探索自己的文化背景。<br>
-            </span>
-            <br>
-            <span>中程目標：藉由本專案，讓都市原住民青年能夠透過瞭解原住民文化，建立對自己族群和文化的認同感，促進原住民族群之間的凝聚力。<br></span>
-            <span><br>
-遠程目標：期望都市原住民青年能夠意識到文化流失的問題，並運用他們在都市所學的知識和技能，幫助及回饋部落，促進原住民文化的保存和傳承。</span>
-        </div>
-    </div>
-</div>
-<div class="teammate">
-    <div class="us1">
-        <h1><i class="fa-solid fa-circle fa-lg" style="color: #ffc700; vertical-align: middle;"></i> 成員介紹</h1>
-    </div>
-        <div class="id1">
-            <div class="id1pic">
-        <img src="images/思妤.JPG" alt="pic"></div>
-            <div class="id1info">
-                <h2 class="info">專案經理 - 陳思妤</h2>
-                <span style="font-size:15px;">思妤是我們專題小組其中一個來自馬來西亞的成員，她負責協調和管理小組工作，包括任務分配、時間表安排、溝通和協調、及協助其他成員等，讓整體專案能順利進行。同時，她也是專題預告片短影音的編導，負責劇本創作和影片製作及產出。</span>
-        </div>
-            
-    </div>
-     <div class="id2">
-          <div class="id1pic">
-        <img src="images/雅絜.jpg" alt="pic"></div>
-            <div class="id1info2">
-                <h2 class="info2">市場經理 - 張雅絜</h2>
-                <span>雅絜是我們專題小組中唯一非原住民或外籍同學的成員，同時負責行銷和副導的角色。她管理著專題的社群平台，策劃每篇貼文，並緊密互動。
-                    同時，她也在短影音製作中擔任副導，控制時間安排和拍攝節奏。</span>
-        </div>           
-    </div>
-       <div class="id1">
-            <div class="id1pic">
-        <img src="images/浩揚.JPG" alt="pic"></div>
-            <div class="id1info">
-                <h2 class="info">產品經理 - 陳浩揚</h2>
-                <span>浩揚是我們專題小組中其中一個來自花蓮的阿美族成員負責市場調研、贊助洽談、展場規劃。他同時擔任財務管理的角色，負責保管小組的資金。</span>
-        </div>            
-    </div>
-     <div class="id2">
-          <div class="id1pic">
-        <img src="images/鏡淯.JPG" alt="pic"></div>
-            <div class="id1info2">
-                <h2 class="info2">系統分析師 - 洪鏡淯</h2>
-                <span>鏡淯是我們專題小組中的一位馬來西亞成員。他在專題中擔任程式負責人和攝影師的雙重角色。他獨力建立了網站，同時負責影片的拍攝工作，這對於網站的創建和影片的品質至關重要。</span>
-        </div>           
-    </div>
-     <div class="id1">
-            <div class="id1pic">
-        <img src="images/AnyConv.com__家卉.jpg" alt="pic"></div>
-            <div class="id1info">
-                <h2 class="info">UI/UX設計師 - 林家卉</h2>
-                <span>家卉是我們專題小組中來自花蓮的阿美族成員。她是負責整個專案的主視覺。她負責專題的視覺設計，包括Logo、吉祥物、貼文圖片以及網站主視覺，所有的美術設計都是由她創作。</span>
-        </div>            
-    </div>
-    </div>
-</main>
- <div class="footer_banner" id="contact">
+    <button id="logout-button" style="display:none;">登出</button> <!-- 添加登出按钮 -->
+    <div class="footer_banner" id="contact">
  <div class="footer-logo">
      <div class="footer-logo1">
     <img src="images/footer.png" alt="logo"></div></div>
@@ -191,5 +239,5 @@ menuItems.forEach((item) => {
         // 使用 JavaScript 获取当前年份并设置到 span 元素中
         document.getElementById("currentYear").innerHTML = new Date().getFullYear();
     </script>
-    </body>
+</body>
 </html>
